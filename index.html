@@ -6,47 +6,272 @@
     <title>Kelly Marques Nails</title>
     <link rel="icon" href="./img/nail-polish_2954529.png" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v6.7.0/js/all.js"
+    ></script>
   </head>
   <body>
-    <!--cabeçalho-->
-    <header class="header" id="header">
-      <div class="contacts" id="contacts">
-        <ul>
-          <li><a>(00) 00000-0000</a></li>
-          <li><a>Siga-nos:</a></li>
-        </ul>
-      </div>
-
+    <header class="header">
       <!--logo-->
-      <div class="logo" id="logo">
-        <img
-          src="./img/nail_2437882.png"
-          alt="banner-img"
-          class="banner-image"
-          width="10%"
-        />
-        <a href="/">Kelly Marques <span>Nails</span></a>
+      <div class="logo">
+        <a class="logo-content" href="/">
+          <img
+            src="./img/nail-polish_2954529.png"
+            alt="logo.img"
+            width="30"
+            height="30"
+          />
+          <span>Kelly Marques <span class="nails">Nails</span></span>
+        </a>
       </div>
 
-      <!--navegação-->
-      <nav class="nav" id="nav">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Sobre Nós</a></li>
-          <li><a href="">Serviços</a></li>
-          <li><a href="">Profissionais</a></li>
+      <!--navegation-->
+      <nav class="nav">
+        <ul class="nav-itens">
+          <li><a href="" class="nav-item">Home</a></li>
+          <li><a href="" class="nav-item">Sobre Nós</a></li>
+          <li><a href="" class="nav-item">Serviços</a></li>
+          <li><a href="" class="nav-item">Profissionais</a></li>
+          <li><a href="" class="nav-item">Fale Conosco</a></li>
         </ul>
-
-        <!--agendar horario-->
-        <div class="schedule" id="schedule">
-          <!--botão agendar horario-->
-          <button>Agendar Horário</button>
-        </div>
       </nav>
+
+      <!--schedule-->
+      <div class="schedule">
+        <a
+          href="https://api.whatsapp.com/send?phone=5581995478757"
+          target="_blank"
+          class="schedule-item"
+          >Agendar Horário <i class="fa-solid fa-clock"></i
+        ></a>
+      </div>
     </header>
 
     <main>
-      <section class="banner" id="banner"></section>
+      <!--banner-->
+      <section class="banner">
+        <div class="banner-content">
+          <article class="banner-text">
+            <h1 class="banner-subtitle">Seja bem-vinda a</h1>
+            <h2 class="banner-title">Kelly Marques Nails</h2>
+            <p>
+              Bem-vinda à <b>Kelly Marques Nails</b>, onde a excelência em
+              beleza encontra o conforto do bem-estar. Descubra o que é possível
+              quando a arte da estética se encontra com a dedicação ao seu
+              bem-estar.
+            </p>
+            <ul class="banner-list">
+              <li>
+                <h1>
+                  <img
+                    src="./img/nail-polish-bottle_18502563.png"
+                    alt="logo.img"
+                    width="30"
+                    height="30"
+                  />
+                  <span>Profissional Especialista</span>
+                </h1>
+                <p>
+                  Com anos de experiência e treinamento contínuo, garante um
+                  serviço de qualidade excepcional em cada visita.
+                </p>
+              </li>
+              <li>
+                <h1>
+                  <img
+                    src="./img/nail-polish-bottle_18502563.png"
+                    alt="logo.img"
+                    width="30"
+                    height="30"
+                  />
+                  <span>Produtos de Qualidade</span>
+                </h1>
+                <p>
+                  Trabalho apenas com os melhores produtos do mercado,
+                  escolhidos criteriosamente para garantir resultados duradouros
+                  e saudáveis.
+                </p>
+              </li>
+              <li>
+                <h1>
+                  <img
+                    src="./img/nail-polish-bottle_18502563.png"
+                    alt="logo.img"
+                    width="30"
+                    height="30"
+                  />
+                  <span>Ambiente Confortável</span>
+                </h1>
+                <p>
+                  Cada detalhe foi cuidadosamente planejado para proporcionar
+                  uma experiência inigualável de bem-estar.
+                </p>
+              </li>
+            </ul>
+          </article>
+          <aside class="banner-image">
+            <img src="./img/banner.jpg" alt="banner-image" class="banner-img" />
+          </aside>
+        </div>
+      </section>
+
+      <!--services-->
+      <section class="services">
+        <h2 class="services-title">Conheça nosso serviço</h2>
+        <div class="services-content">
+          <article class="service">
+            <figure class="service-image">
+              <img
+                src="./img/service1.jpg"
+                alt=""
+                class="service-img"
+                width="30"
+                height="30"
+              />
+              <footer class="service-text">
+                <h2 class="service-title">Aplicação de Unha em Gel</h2>
+              </footer>
+            </figure>
+          </article>
+          <article class="service">
+            <figure class="service-image">
+              <img
+                src="./img/service1.jpg"
+                alt=""
+                class="service-img"
+                width="30"
+                height="30"
+              />
+              <h2 class="service-title">Aplicação de Unha em Gel</h2>
+            </figure>
+          </article>
+          <article class="service">
+            <figure class="service-image">
+              <img
+                src="./img/service1.jpg"
+                alt=""
+                class="service-img"
+                width="30"
+                height="30"
+              />
+              <h2 class="service-title">Aplicação de Unha em Gel</h2>
+            </figure>
+          </article>
+          <article class="service">
+            <figure class="service-image">
+              <img
+                src="./img/service1.jpg"
+                alt=""
+                class="service-img"
+                width="30"
+                height="30"
+              />
+              <h2 class="service-title">Aplicação de Unha em Gel</h2>
+            </figure>
+          </article>
+          <article class="service">
+            <figure class="service-image">
+              <img
+                src="./img/service1.jpg"
+                alt=""
+                class="service-img"
+                width="30"
+                height="30"
+              />
+              <h2 class="service-title">Aplicação de Unha em Gel</h2>
+            </figure>
+          </article>
+          <article class="service">
+            <figure class="service-image">
+              <img
+                src="./img/service1.jpg"
+                alt=""
+                class="service-img"
+                width="30"
+                height="30"
+              />
+              <h2 class="service-title">Aplicação de Unha em Gel</h2>
+            </figure>
+          </article>
+        </div>
+        <a class="card-button">Mais informações</a>
+      </section>
+
+      <!--professionals-->
+      <section class="professionals">
+        <h2 class="professionals-title">Conheça nossa profissional</h2>
+        <div class="professionals-content">
+          <article class="professional"></article>
+        </div>
+        <a class="card-button">Mais informações</a>
+      </section>
+
+      <!--contact-->
+      <section class="contact">
+        <div class="contact-content">
+          <h1 class="contact-title">Precisando de ajuda?</h1>
+          <h2>Fale Conosco</h2>
+          <p>
+            Explore nosso site para saber mais sobre nosso serviço e entre em
+            contato conosco para falar com nossa Profissional. Estamos ansiosos
+            para ajudar você!
+          </p>
+          <h2>FORMULARIO DE CONTATO</h2>
+          <form
+            action="https://api.staticforms.xyz/submit"
+            method="post"
+            class="contact-form"
+          >
+            <input
+              type="hidden"
+              name="accessKey"
+              value="2e80be0b-cc32-4b8e-9051-419412b3dd5d"
+            />
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Digite seu nome"
+            />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Digite seu e-mail"
+            />
+            <!-- REDIRECT
+            <input
+              type="hidden"
+              name="redirectTo"
+              value="https://example.com/contact/success"
+            />
+            -->
+            <textarea
+              name="message"
+              required
+              placeholder="Digite sua mensagem"
+            ></textarea>
+            <button class="contact-button" type="submit">
+              Enviar Mensagem
+            </button>
+          </form>
+          <aside class="contact-img">
+            <img
+              src="./img/contato.webp"
+              alt=""
+              class="contact-image"
+              width="40%"
+            />
+          </aside>
+        </div>
+      </section>
     </main>
   </body>
 </html>

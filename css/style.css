@@ -1,2 +1,136 @@
 :root {
+  --font-header: "Poppins", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-size-small: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+  --font-size-xxlarge: 3rem;
+  --font-size-xxxlarge: 4rem;
+  --color-primary: #ceb19c;
+  --color-text: #4a4a4a;
+  --color-white: #fdfdfd;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-white);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*HEADER*/
+.header {
+  background: var(--color-primary);
+  font-family: var(--font-header);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  padding: 0 2.5rem;
+}
+
+/*LOGO*/
+.logo-content {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/*.nails {
+  color: var(--color-primary);
+}*/
+
+/*NAVEGATION*/
+.nav-itens {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-item,
+.schedule-item {
+  color: var(--color-text);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*SCHEDULE*/
+.schedule-item {
+  padding: 0.4rem 1.5rem;
+  color: var(--color-white);
+  background: var(--color-secondary);
+  border-radius: 5px;
+}
+
+/*BANNER*/
+.banner {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.banner-content {
+  font-family: var(--font-header);
+  width: 90%;
+  height: calc(100vh - 96px);
+  padding: 6rem 0;
+  display: flex;
+  margin: auto;
+  padding: 7rem 0 0 0;
+}
+
+.banner-text {
+  width: 50%;
+  padding: 0 0 0 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner-title {
+  color: var(--color-text);
+  font-size: var(--font-size-xxlarge);
+  font-weight: 900;
+  line-height: 118%;
+}
+
+.banner-subtitle {
+  color: var(--color-primary);
+}
+
+.banner-description {
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  color: var(--color-primary);
+}
+
+.banner-list {
+  padding: 5rem 0 0 0;
+}
+
+.banner-list li {
+  flex-direction: row;
+  text-align: start;
+  margin-bottom: 4rem;
+}
+
+.banner-image {
+  width: 50%;
+  margin: auto;
+}
+
+.banner-img {
+  width: 100%;
+  padding: 0 0 0 10rem;
 }
