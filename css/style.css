@@ -1,15 +1,18 @@
 :root {
-  --font-header: "Poppins", sans-serif;
-  --font-body: "Roboto", sans-serif;
+  --font-cormorant: "Cormorant Garamond", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-style-italic: italic;
   --font-size-small: 1rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.5rem;
   --font-size-xlarge: 2rem;
   --font-size-xxlarge: 3rem;
   --font-size-xxxlarge: 4rem;
+  --color-background: #f3f3f3;
   --color-primary: #ceb19c;
   --color-text: #4a4a4a;
   --color-white: #fdfdfd;
+  --f: 1.15;
 }
 
 * {
@@ -26,10 +29,16 @@ html {
   scroll-behavior: smooth;
 }
 
+link {
+  display: none;
+}
+
 /*HEADER*/
 .header {
   background: var(--color-primary);
-  font-family: var(--font-header);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-large);
+  font-weight: 700;
   width: 100%;
   display: flex;
   align-items: center;
@@ -45,12 +54,8 @@ html {
   align-items: center;
   text-decoration: none;
   color: var(--color-text);
-  font-weight: 600;
+  text-transform: uppercase;
 }
-
-/*.nails {
-  color: var(--color-primary);
-}*/
 
 /*NAVEGATION*/
 .nav-itens {
@@ -61,12 +66,31 @@ html {
 
 .nav-item,
 .schedule-item {
+  font-style: italic;
   color: var(--color-text);
   font-weight: 500;
   text-decoration: none;
 }
 
+.nav-item:hover {
+  color: var(--color-white);
+  transition: 0.4s;
+}
+
 /*SCHEDULE*/
+.schedule {
+  background: var(--color-text);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.schedule:hover {
+  transform: scale(1.05);
+}
+
 .schedule-item {
   padding: 0.4rem 1.5rem;
   color: var(--color-white);
@@ -78,59 +102,321 @@ html {
 .banner {
   width: 100%;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
 }
 
 .banner-content {
-  font-family: var(--font-header);
-  width: 90%;
-  height: calc(100vh - 96px);
-  padding: 6rem 0;
+  width: 70%;
   display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
   margin: auto;
-  padding: 7rem 0 0 0;
+  padding: 3rem 0 0 0;
 }
 
 .banner-text {
+  font-family: var(--font-cormorant);
   width: 50%;
   padding: 0 0 0 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  row-gap: 1rem;
 }
 
 .banner-title {
   color: var(--color-text);
   font-size: var(--font-size-xxlarge);
-  font-weight: 900;
-  line-height: 118%;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2em;
 }
 
 .banner-subtitle {
   color: var(--color-primary);
+  font-size: var(--font-size-xlarge);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.5em;
+  letter-spacing: 0px;
 }
 
 .banner-description {
   color: var(--color-text);
-  font-size: var(--font-size-small);
-  color: var(--color-primary);
+  font-family: var(--font-inter);
+  font-size: var(--font-size-large);
+  font-weight: 300;
 }
 
 .banner-list {
-  padding: 5rem 0 0 0;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.banner-list-title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transition: 0.4s;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-xlarge);
+  text-transform: uppercase;
+}
+
+.banner-list-title:hover {
+  transform: scale(1.05);
+}
+
+.banner-list-title span {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 0 1.4rem;
+}
+
+.banner-list-description {
+  color: var(--color-text);
+  font-size: var(--font-size-medium);
+  font-family: var(--font-inter);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: start;
+  padding: 0 0 0 4.3rem;
 }
 
 .banner-list li {
   flex-direction: row;
   text-align: start;
   margin-bottom: 4rem;
+  list-style: none;
 }
 
 .banner-image {
-  width: 50%;
+  width: 60%;
   margin: auto;
+  clip-path: inset(0);
+  transition: 0.4s;
+}
+
+.banner-image:hover {
+  clip-path: inset(calc((1 - 1 / var(--f)) * 50%));
+  scale: var(--f);
 }
 
 .banner-img {
   width: 100%;
   padding: 0 0 0 10rem;
+}
+
+/*SERVICES*/
+.services {
+  background-color: var(--color-background);
+}
+
+.services-content {
+  font-family: var(--font-header);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 1rem 0 0 0;
+}
+
+.services-title {
+  color: var(--color-primary);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-xlarge);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 0.5em;
+  letter-spacing: 0px;
+  padding: 1rem 0 0 0;
+}
+
+.services-subtitle {
+  color: var(--color-text);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-xxxlarge);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  padding: 0.5rem 0 0 0;
+}
+
+.services {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.services-content {
+  display: flex;
+  width: 90%;
+  margin: 0.5rem auto;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0.3rem 8rem;
+  flex-wrap: wrap;
+  border-radius: 8px;
+}
+
+.service {
+  width: 100%;
+  margin: 1rem 0.5rem;
+  border-radius: 8px;
+}
+
+.service-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.service-img {
+  width: 30%;
+  border-radius: 8px;
+}
+
+.service-title {
+  font-family: "Cormorant Garamond", Sans-serif;
+  color: var(--color-primary);
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1em;
+  letter-spacing: 0px;
+  padding: 1rem 0 0 0;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: 0px;
+  color: var(--color-primary);
+  padding: 0 0 1rem 0;
+}
+
+/*PROFISSIONAIS*/
+.professionals {
+  margin: 3rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.professionals-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0.5rem auto;
+  max-width: 1200px;
+  padding: 0.3rem 8rem;
+  flex-wrap: wrap;
+  border-radius: 8px;
+}
+
+.professional {
+  width: 100%;
+  margin: 1rem 0.5rem;
+  border-radius: 8px;
+}
+
+.professional-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.professional-img {
+  width: 50%;
+  border-radius: 8px;
+}
+
+.professionals-title {
+  color: var(--color-primary);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-xlarge);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 0.5em;
+  letter-spacing: 0px;
+}
+
+.professionals-subtitle {
+  color: var(--color-text);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-xxxlarge);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  padding: 1rem 0 0 0;
+}
+
+.professional-title {
+  color: var(--color-text);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-large);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 0.5em;
+  letter-spacing: 0px;
+  padding: 2rem 0 0 0;
+}
+
+.professional-subtitle {
+  color: var(--color-primary);
+  font-family: var(--font-cormorant);
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  padding: 1rem 0 0 0;
+}
+
+.professionals-button {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: 0px;
+  color: var(--color-primary);
+}
+
+/*CONTACT*/
+.contact {
+  width: 100%;
+  background: var(--color-primary);
+}
+/*RESPONSIVE*/
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 1024px) {
 }
